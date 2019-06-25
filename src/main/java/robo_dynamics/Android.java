@@ -2,13 +2,13 @@ package main.java.robo_dynamics;
 
 import java.util.Random;
 
-public class Android extends Robot implements RobotSystem{
+public class Android extends Robot implements RobotSystem {
 
     private boolean artificialIntelligence;
 
     public Android(String model, String type, String manufacturer, int year, boolean ai) {
         super(model, type, manufacturer, year);
-        ai = artificialIntelligence;
+        artificialIntelligence = ai;
     }
 
     @Override
@@ -27,16 +27,20 @@ public class Android extends Robot implements RobotSystem{
 
         if (healthyPoint <= 3) {
             return 1;
-        } else if (healthyPoint >= 9){
-            return  3;
+        } else if (healthyPoint >= 9) {
+            return 3;
         } else {
-            return  2;
+            return 2;
         }
     }
 
     @Override
     public void shoot() {
-        System.out.println("Hasta la vista, baby");
+        if (artificialIntelligence) {
+            System.out.println("Hasta la vista, baby");
+        } else {
+            System.out.println("I'm not shooting");
+        }
 
     }
 
@@ -47,7 +51,7 @@ public class Android extends Robot implements RobotSystem{
     }
 
     @Override
-    public void adaptationToConditions() {
+    public void adaptationToConditions(Planet planet) {
 
     }
 

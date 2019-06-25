@@ -4,10 +4,10 @@ public interface RobotSystem {
 
     int getState();
 
-    void shoot();   
+    void shoot();
 
     void talk();
 
-    void adaptationToConditions();
+    void adaptationToConditions(Planet planet);
 
 }

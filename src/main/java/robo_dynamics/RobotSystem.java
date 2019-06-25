@@ -2,9 +2,12 @@ package main.java.robo_dynamics;
 
 public interface RobotSystem {
 
-    void move();
-    void state();
-    void shoot();
+    int getState();
+
+    void shoot();   
+
+    void talk();
+
     void adaptationToConditions();
 
 }

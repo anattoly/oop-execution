@@ -1,4 +1,4 @@
-package main.java.robo_dynamics;
+package main.java.robo_dynamics.robots;
 
 public class Robot {
 

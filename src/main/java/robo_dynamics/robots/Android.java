@@ -1,4 +1,7 @@
-package main.java.robo_dynamics;
+package main.java.robo_dynamics.robots;
+
+import main.java.robo_dynamics.planets.Planet;
+import main.java.robo_dynamics.operating_system.RobotSystem;
 
 import java.util.Random;
 

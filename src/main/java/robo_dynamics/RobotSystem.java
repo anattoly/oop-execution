@@ -8,6 +8,6 @@ public interface RobotSystem {
 
     void talk();
 
-    void adaptationToConditions();
+    void adaptationToConditions(Planet planet);
 
 }

@@ -8,7 +8,15 @@ public class Robocop extends Android {
     }
 
     @Override
-    public void adaptationToConditions() {
-        super.adaptationToConditions();
+    public void adaptationToConditions(Planet planet) {
+        if (planet == Planet.SUN) {
+            System.out.println("I'm adaptation to condition planet Sun");
+        } else if (planet == Planet.SEA) {
+            System.out.println("I'm adaptation to condition planet Sea");
+        } else if (planet == Planet.WIND) {
+            System.out.println("I'm adaptation to condition planet Wind");
+        } else {
+            System.out.println("I'm adaptation to condition planet Earth");
+        }
     }
 }

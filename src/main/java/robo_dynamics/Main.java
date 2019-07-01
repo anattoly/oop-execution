@@ -6,16 +6,23 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Android r1 = new Robocop("R1", "Killer", "BostonDynamics", 10, true);
+        Android robocop = new Robocop("K1", "Killer", "BostonDynamics", 10, true);
 
 
-        r1.talk();
+        //Robot talk
+        robocop.talk();
 
-        int robotState = r1.getState();
+        //Current Robot state
+        int robotState = robocop.getState();
         System.out.println(robotState);
 
-        r1.shoot();
+        //Ability to shoot a robot
+        robocop.shoot();
 
-        r1.move();
+        //Ability to move a robot
+        robocop.move();
+
+        //Ability adaption to condition on planet
+        robocop.adaptationToConditions(Planet.SUN);
     }
 }

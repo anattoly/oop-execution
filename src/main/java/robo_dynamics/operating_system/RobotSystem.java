@@ -4,7 +4,7 @@ import main.java.robo_dynamics.planets.Planet;
 
 public interface RobotSystem {
 
-    int getState();
+    void getState(int healthyPoint);
 
     void shoot();
 

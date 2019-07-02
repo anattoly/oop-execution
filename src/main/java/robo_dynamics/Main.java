@@ -13,34 +13,33 @@ public class Main {
 
         Android robocop = new Robocop("K1", "Killer", "BostonDynamics", 10, true);
 
-        //Robot talk
-        robocop.talk();
 
-        //Current Robot state
-        int robotHealthyPoint = getHealthyPoint();
-        robocop.getState(robotHealthyPoint);
+        if (LocalTime.now().isAfter(LocalTime.parse("00:00:00.000")) && LocalTime.now().isBefore(LocalTime.parse("04:59:59.999"))) {
+            System.out.println("Robot charge");
+        } else if (LocalTime.now().isAfter(LocalTime.parse("05:00:00.000")) && LocalTime.now().isBefore(LocalTime.parse("11:59:59.999"))) {
 
-        //Ability to shoot a robot
-        robocop.shoot();
+            robocop.getState(9, 12);
+            robocop.move();
+            robocop.talk();
+            robocop.shoot();
 
-        //Ability to move a robot
-        robocop.move();
+        } else if (LocalTime.now().isAfter(LocalTime.parse("12:00:00.000")) && LocalTime.now().isBefore(LocalTime.parse("18:00:00.000"))) {
+
+            robocop.getState(4, 8);
+            robocop.move();
+            robocop.talk();
+
+        } else {
+
+            robocop.getState(1, 3);
+            robocop.talk();
+        }
 
         //Ability adaption to condition on planets
+
         robocop.adaptationToConditions(Planet.SUN);
 
-        LocalTime currentTime = LocalTime.of(16, 00);
-        System.out.println(currentTime);
-    }
 
-    private static int getHealthyPoint() {
-        int min = 1;
-        int max = 12;
-        int diff = max - min;
-        Random random = new Random();
-        int getHealthyPoint = random.nextInt(diff + 1);
-        getHealthyPoint += min;
-        return getHealthyPoint;
     }
 
 

@@ -20,7 +20,14 @@ public class Android extends Robot implements RobotSystem {
     }
 
     @Override
-    public void getState(int healthyPoint) {
+    public void getState(int minHP, int maxHP) {
+
+        int min = minHP;
+        int max = maxHP;
+        int diff = max - min;
+        Random random = new Random();
+        int healthyPoint = random.nextInt(diff + 1);
+        healthyPoint += min;
 
         if (healthyPoint <= 3) {
             System.out.println("Robot state 1");

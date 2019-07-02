@@ -56,7 +56,7 @@ public class Android extends Robot implements RobotSystem {
     }
 
     @Override
-    public void adaptationToConditions(Planet planet) {
+    public void adaptationToConditions(Planet typePlanet) {
 
     }
 

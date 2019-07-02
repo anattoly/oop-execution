@@ -10,15 +10,15 @@ public class Robocop extends Android {
     }
 
     @Override
-    public void adaptationToConditions(Planet planet) {
-        if (planet == Planet.SUN) {
-            System.out.println("I'm adaptation to condition planet Sun");
-        } else if (planet == Planet.SEA) {
-            System.out.println("I'm adaptation to condition planet Sea");
-        } else if (planet == Planet.WIND) {
-            System.out.println("I'm adaptation to condition planet Wind");
+    public void adaptationToConditions(Planet typePlanet) {
+        if (Planet.A.equals(typePlanet)) {
+            System.out.println(typePlanet.getTypeArmor());
+        } else if (Planet.B.equals(typePlanet)) {
+            System.out.println(typePlanet.getTypeArmor());
+        } else if (Planet.C.equals(typePlanet)) {
+            System.out.println(typePlanet.getTypeArmor());
         } else {
-            System.out.println("I'm adaptation to condition planet Earth");
+            System.out.println("I can't adaptation to condition this planet");
         }
     }
 }

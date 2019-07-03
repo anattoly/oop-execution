@@ -16,11 +16,20 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Android robocop = new Robocop("K1", "Killer", "BostonDynamics", 10, true);
+        Android robocop = new Robocop(
+                                    "K1",
+                                    "Killer",
+                                    "BostonDynamics",
+                                    10,
+                                    true);
 
-        if (LocalTime.now().isAfter(LocalTime.parse("00:00:00.001")) && LocalTime.now().isBefore(LocalTime.parse("04:59:59.999"))) {
+        if (LocalTime.now().isAfter(LocalTime.parse("00:00:00.001"))
+                && LocalTime.now().isBefore(LocalTime.parse("04:59:59.999"))) {
+
             System.out.println("Robot charge");
-        } else if (LocalTime.now().isAfter(LocalTime.parse("05:00:00.000")) && LocalTime.now().isBefore(LocalTime.parse("11:59:59.999"))) {
+
+        } else if (LocalTime.now().isAfter(LocalTime.parse("05:00:00.000"))
+                && LocalTime.now().isBefore(LocalTime.parse("11:59:59.999"))) {
 
             robocop.getState(9, 12);
             robocop.move();
@@ -28,7 +37,8 @@ public class Main {
             robocop.shoot();
             robocop.adaptationToConditions(randomPlanet());
 
-        } else if (LocalTime.now().isAfter(LocalTime.parse("12:00:00.000")) && LocalTime.now().isBefore(LocalTime.parse("18:00:00.000"))) {
+        } else if (LocalTime.now().isAfter(LocalTime.parse("12:00:00.000"))
+                && LocalTime.now().isBefore(LocalTime.parse("18:00:00.000"))) {
 
             robocop.getState(4, 8);
             robocop.move();
@@ -41,6 +51,7 @@ public class Main {
             robocop.talk();
             robocop.adaptationToConditions(randomPlanet());
         }
+
 
     }
 
